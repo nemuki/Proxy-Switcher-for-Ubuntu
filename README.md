@@ -2,10 +2,17 @@
 Ubuntuのターミナル内のProxy設定を一括で変更するシェルスクリプトです。
 
 ## 使い方
-3, 4行目の`PROXY_HOST`と`PROXY_PORT`を設定することで使用できます。
-> アカウント指定には対応できていません…
+```
+$ git clone https://github.com/nemuki/Proxy-Switcher-for-Ubuntu.git
+$ cd Proxy-Switcher-for-Ubuntu
+$ nano proxy.sh
 
-```shell
+--- proxy.sh
+# 3, 4行目の`PROXY_HOST`と`PROXY_PORT`を設定することで使用できます。
+PROXY_HOST="your proxy address"
+PROXY_PORT="your proxy port"
+---
+
 $ chmod +x proxy.sh
 $ ./proxy.sh
 …
