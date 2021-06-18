@@ -26,7 +26,7 @@ $ ./proxy.sh
 ```
 apt
 Terminal Common
-	wget
-	curl
+  wget
+  curl
 git
 ```
