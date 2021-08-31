@@ -6,7 +6,7 @@ PROXY_PORT=""
 proxy_status=$(<./.proxy_status.txt)
 
 case $proxy_status in
-	# set
+  # set
   "OFF" )
 # apt
 cat <<EOD | sudo tee /etc/apt/apt.conf.d/00proxy
@@ -30,9 +30,10 @@ $(git config --global https.proxy http://$PROXY_HOST:$PROXY_PORT)
 
 echo 'ON' > ./.proxy_status.txt
 ;;
-	# unset
-	"ON" )
-# apt 
+
+  # unset
+  "ON" )
+# apt
 cat <<EOD | sudo tee /etc/apt/apt.conf.d/00proxy
 # Acquire::ftp::Proxy "http://$PROXY_HOST:$PROXY_PORT";
 # Acquire::http::Proxy "http://$PROXY_HOST:$PROXY_PORT";
@@ -58,5 +59,4 @@ echo 'OFF' > ./.proxy_status.txt
 esac
 
 proxy_status=$(<.proxy_status.txt)
-
 echo $proxy_status
