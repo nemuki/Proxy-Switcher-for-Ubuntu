@@ -14,12 +14,12 @@ PROXY_PORT="your proxy port"
 ---
 
 $ chmod +x proxy.sh
-$ ./proxy.sh
+$ source proxy.sh
 …
 …
 …
-1=ON
-0=OFF
+ON
+OFF
 ```
 
 ## 対応設定
