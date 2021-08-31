@@ -25,8 +25,8 @@ export https_proxy="http://$PROXY_HOST:$PROXY_PORT"
 # sudo canonical-livepatch config https-proxy=http://$PROXY_HOST:$PROXY_PORT
 
 # git
-git config --global http.proxy http://$PROXY_HOST:$PROXY_PORT
-git config --global https.proxy http://$PROXY_HOST:$PROXY_PORT
+$(git config --global http.proxy http://$PROXY_HOST:$PROXY_PORT)
+$(git config --global https.proxy http://$PROXY_HOST:$PROXY_PORT)
 
 echo 'ON' > ./.proxy_status.txt
 ;;
@@ -49,8 +49,8 @@ export -n https_proxy
 # sudo canonical-livepatch config https-proxy=""
 
 # git
-git config --global --unset http.proxy
-git config --global --unset https.proxy
+$(git config --global --unset http.proxy)
+$(git config --global --unset https.proxy)
 
 echo 'OFF' > ./.proxy_status.txt
 ;;
